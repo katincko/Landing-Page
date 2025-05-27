@@ -1,6 +1,5 @@
 node_modules/
 dist/
-output.css
 output.css.map
 .env
 .DS_Store
