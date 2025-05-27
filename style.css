@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --cor-fundo: #f9f9f9;
+  --cor-primario: #1e293b;
+  --cor-secundario: #475569;
+  --cor-destaque: #475569;
+  --cor-contraste: #ffffff;
+  --cor-titulo: #0f172a;
+  --cor-texto: #334155;
+  --cor-caixa: #ffffff;
+}
+.tema-claro {
+  --cor-fundo: #f9f9f9;
+  --cor-primario: #1e293b;
+  --cor-secundario: #475569;
+  --cor-destaque: #475569;
+  --cor-contraste: #ffffff;
+  --cor-titulo: #0f172a;
+  --cor-texto: #334155;
+  --cor-caixa: #ffffff;
+}
+.tema-escuro {
+  --cor-fundo: #181818;        /* Fundo principal escuro */
+  --cor-primario: #232323;     /* Header, botões, destaques */
+  --cor-secundario: #282828;   /* Caixas e textos */
+  --cor-destaque: #cccccc;     /* Destaques/botões */
+  --cor-contraste: #ffffff;    /* Texto sobre escuro e botões */
+  --cor-titulo: #e0e0e0;       /* Títulos claros */
+  --cor-texto: #e0e0e0;        /* Texto claro */
+  --cor-caixa: #232323;        /* Caixas */
+}
+/* PALETA NEUTRA/DOURADA ATUALIZADA */
+.tema-neutro {
+  --cor-fundo: #f5f1ec;         /* Fundo principal */
+  --cor-primario: #5c3b2e;      /* Header, botões, destaques */
+  --cor-secundario: #a07b60;    /* Caixas e textos */
+  --cor-destaque: #7e5b4d;      /* Destaques/botões */
+  --cor-contraste: #ffffff;     /* Texto sobre escuro e botões */
+  --cor-titulo: #5c3b2e;        /* Títulos */
+  --cor-texto: #1e1e1e;         /* Texto escuro sobre claro */
+  --cor-caixa: #e7d7ca;         /* Fundo intermediário das seções */
+}
+
+/* Utilitários */
+.bg-fundo { background: var(--cor-fundo) !important; }
+.bg-primario { background: var(--cor-primario) !important; }
+.bg-secundario { background: var(--cor-secundario) !important; }
+.bg-destaque { background: var(--cor-destaque) !important; }
+.bg-contraste { background: var(--cor-contraste) !important; }
+.bg-caixa { background: var(--cor-caixa) !important; }
+
+.text-titulo { color: var(--cor-titulo) !important; }
+.text-texto { color: var(--cor-texto) !important; }
+.text-contraste { color: var(--cor-contraste) !important; }
+
+.border-contraste { border-color: var(--cor-contraste) !important; }
+.border-primario { border-color: var(--cor-primario) !important; }
+.border-secundario { border-color: var(--cor-secundario) !important; }
+.border-destaque { border-color: var(--cor-destaque) !important; }
+.border-caixa { border-color: var(--cor-caixa) !important; }

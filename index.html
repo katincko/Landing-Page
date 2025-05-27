@@ -5,58 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link href="output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+   
   </head>
-  <body class="bg-claro-fundo text-claro-texto font-sans">
+  <body class="tema-claro font-sans transition-colors duration-300 bg-fundo text-texto">
     <!-- Header -->
-    <header class="bg-claro-contraste shadow p-4 flex justify-center gap-3 items-center">
-      <img src="https://img.icons8.com/ios-filled/50/000000/scales.png" alt="Logo balança advogado" class="me-80 h-10 transition-transform duration-200 active:scale-110" />
-      <button class="mx-2 p-2 rounded-full hover:bg-claro-secundario transform duration-200 active:scale-110 focus:bg-claro-secundario">
-        <img src="https://freesvg.org/img/circle-15.png" alt="preto" class="w-12 h-12 rounded-full object-contain bg-claro-contraste" />
-      </button>
-      <button class="mx-2 p-2 rounded-full hover:bg-claro-secundario transform duration-200 active:scale-110 focus:bg-claro-secundario">
-        <img src="https://freesvg.org/img/H5MljaZdAT1t4.png" alt="branco" class="w-12 h-12 rounded-full object-contain bg-claro-contraste" />
-      </button>
-      <button class="mx-2 p-2 rounded-full hover:bg-claro-secundario transform duration-200 active:scale-110 focus:bg-claro-secundario">
-        <img src="https://freesvg.org/img/Orange_Sun_Wild_West_Vector_Pixel_Art.png" alt="preto" class="w-12 h-12 rounded-full object-contain bg-claro-contraste" />
-      </button>
-
-      <h1 class="text-xl md:text-2xl font-bold ms-80 text-claro-titulo">Dr. Paulinho - Advogado de Divórcios</h1>
+    <header class="bg-primario shadow p-4 flex flex-col md:flex-row md:justify-center md:gap-3 items-center gap-4">
+      <img src="https://img.icons8.com/ios-filled/50/000000/scales.png" alt="Logo balança advogado" class="h-10 transition-transform duration-200 active:scale-110 mb-2 md:mb-0" />
+      <div class="flex flex-row gap-2 mb-2 md:mb-0">
+        <button data-tema="claro" class="p-2 rounded-full hover:bg-claro-secundario focus:bg-claro-destaque focus:outline-none transition">
+          <img src="https://freesvg.org/img/H5MljaZdAT1t4.png" alt="Tema Claro" class="w-12 h-12 rounded-full object-contain" />
+        </button>
+        <button data-tema="escuro" class="p-2 rounded-full hover:bg-escuro-secundario focus:bg-escuro-destaque focus:outline-none transition">
+          <img src="https://freesvg.org/img/circle-15.png" alt="Tema Escuro" class="w-12 h-12 rounded-full object-contain " />
+        </button>
+        <button data-tema="neutro" class="p-2 rounded-full hover:bg-neutro-secundario focus:bg-neutro-destaque focus:outline-none transition">
+          <img src="https://freesvg.org/img/Orange_Sun_Wild_West_Vector_Pixel_Art.png" alt="Tema dourado" class="w-12 h-12 rounded-full object-contain" />
+        </button>
+      </div>
+      <h1 class="text-xl md:text-2xl font-bold text-contraste text-center md:ms-80">Dr. Paulinho - Advogado de Divórcios</h1>
     </header>
 
     <!-- Foto e título -->
-    <section class="text-center py-10 px-4">
-      <img src="https://api.dicebear.com/9.x/thumbs/svg?seed=Destiny" alt="Avatar ilustrado de Paulinho" class="mx-auto rounded-full w-40 h-40 object-contain bg-claro-contraste mb-4" />
-      <h2 class="text-2xl md:text-3xl font-semibold text-claro-titulo">Especialista em Divórcios Consensuais</h2>
+    <section class="text-center py-10 px-4 bg-fundo">
+      <img src="https://api.dicebear.com/9.x/thumbs/svg?seed=Destiny" alt="Avatar ilustrado de Paulinho" class="mx-auto rounded-full w-40 h-40 object-contain bg-contraste mb-4" />
+      <h2 class="text-2xl md:text-3xl font-semibold text-titulo">Especialista em Divórcios Consensuais</h2>
     </section>
 
     <!-- Requisitos -->
-    <section class="px-4 py-10 max-w-4xl mx-auto">
-      <h3 class="text-xl md:text-2xl font-bold mb-6 text-center text-claro-titulo">Requisitos para o processo</h3>
+    <section class="px-4 py-10 max-w-4xl mx-auto bg-fundo">
+      <h3 class="text-xl md:text-2xl font-bold mb-6 text-center text-titulo">Requisitos para o processo</h3>
       <div class="grid gap-6 md:grid-cols-3">
-        <div class="bg-claro-contraste p-6 rounded-xl shadow">
-          <h4 class="font-semibold text-lg mb-2 text-claro-titulo">Sem filhos menores</h4>
-          <p class="text-sm text-claro-texto">O casal não pode ter filhos menores de idade.</p>
+        <div class="bg-caixa p-6 rounded-xl shadow">
+          <h4 class="font-semibold text-lg mb-2 text-titulo">Sem filhos menores</h4>
+          <p class="text-sm text-texto">O casal não pode ter filhos menores de idade.</p>
         </div>
-        <div class="bg-claro-contraste p-6 rounded-xl shadow">
-          <h4 class="font-semibold text-lg mb-2 text-claro-titulo">Sem bens a dividir</h4>
-          <p class="text-sm text-claro-texto">Não pode haver divisão de patrimônio.</p>
+        <div class="bg-caixa p-6 rounded-xl shadow">
+          <h4 class="font-semibold text-lg mb-2 text-titulo">Sem bens a dividir</h4>
+          <p class="text-sm text-texto">Não pode haver divisão de patrimônio.</p>
         </div>
-        <div class="bg-claro-contraste p-6 rounded-xl shadow">
-          <h4 class="font-semibold text-lg mb-2 text-claro-titulo">Acordo entre ambas as partes</h4>
-          <p class="text-sm text-claro-texto">As partes precisam estar de comum acordo.</p>
+        <div class="bg-caixa p-6 rounded-xl shadow">
+          <h4 class="font-semibold text-lg mb-2 text-titulo">Acordo entre ambas as partes</h4>
+          <p class="text-sm text-texto">As partes precisam estar de comum acordo.</p>
         </div>
       </div>
     </section>
 
     <!-- Contato -->
-    <section class="bg-claro-contraste py-10 px-4">
+    <section class="bg-primario py-10 px-4">
       <div class="max-w-xl mx-auto">
-        <h3 class="text-xl md:text-2xl font-bold text-center mb-6 text-claro-titulo">Entre em contato</h3>
+        <h3 class="text-xl md:text-2xl font-bold text-center mb-6 text-titulo">Entre em contato</h3>
         <form class="grid gap-4">
-          <input type="text" placeholder="Seu nome" class="p-3 border rounded-lg" />
-          <input type="email" placeholder="Seu e-mail" class="p-3 border rounded-lg" />
-          <textarea placeholder="Mensagem" class="p-3 border rounded-lg"></textarea>
-          <button type="submit" class="bg-claro-destaque text-claro-contraste py-3 rounded-lg hover:bg-claro-primario transition">
+          <input type="text" placeholder="Seu nome" class="p-3 border border-contraste rounded-lg text-texto bg-fundo" />
+          <input type="email" placeholder="Seu e-mail" class="p-3 border border-contraste rounded-lg text-texto bg-fundo" />
+          <textarea placeholder="Mensagem" class="p-3 border border-contraste rounded-lg text-texto bg-fundo"></textarea>
+          <button type="submit" class="bg-destaque text-contraste py-3 rounded-lg hover:bg-primario transition">
             Enviar mensagem
           </button>
         </form>
@@ -64,8 +67,19 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-claro-secundario text-center p-4 mt-10">
-      <p class="text-sm text-claro-contraste">© 2025 Dr. Paulinho - Todos os direitos reservados</p>
+    <footer class="bg-secundario text-center p-4 mt-10">
+      <p class="text-sm text-titulo">© 2025 Dr. Paulinho - Todos os direitos reservados</p>
     </footer>
+
+    <!-- Script de troca de tema -->
+    <script>
+      const body = document.body;
+      document.querySelectorAll('[data-tema]').forEach(botao => {
+        botao.addEventListener('click', () => {
+          body.classList.remove('tema-claro', 'tema-escuro', 'tema-neutro');
+          body.classList.add(`tema-${botao.dataset.tema}`);
+        });
+      });
+    </script>
   </body>
 </html>
