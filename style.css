@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --cor-fundo: #f9f9f9;
   --cor-primario: #1e293b;
@@ -12,6 +14,8 @@
   --cor-texto: #334155;
   --cor-caixa: #ffffff;
 }
+
+
 .tema-claro {
   --cor-fundo: #f9f9f9;
   --cor-primario: #1e293b;
@@ -45,6 +49,37 @@
 }
 
 /* Utilitários */
+@keyframes fadeInUp {
+  0% {opacity: 0;transform: translateY(30px);}
+  100% {opacity: 1;transform: translateY(0);}
+}
+@keyframes fadeInDown {
+  0% {opacity: 0;transform: translateY(-30px);}
+  100% {opacity: 1;transform: translateY(0);}
+}
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(40px);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+.animate-fadeInUp{
+  animation: fadeInUp 1.8s cubic-bezier(.5,1.5,.5,1) both;
+
+}
+.animate-fadeInDown{
+  animation: fadeInDown 1s ease both;
+}
+.animate-fadeInLeft {
+  animation: fadeInLeft 1s cubic-bezier(.5,1.5,.5,1) both;
+}
+.animate-fadeInRight {
+  animation: fadeInRight 1s cubic-bezier(.5,1.5,.5,1) both;
+}
+
+
 .bg-fundo { background: var(--cor-fundo) !important; }
 .bg-primario { background: var(--cor-primario) !important; }
 .bg-secundario { background: var(--cor-secundario) !important; }

@@ -10,19 +10,23 @@
   </head>
   <body class="tema-claro font-sans transition-colors duration-300 bg-fundo text-texto">
     <!-- Header -->
-    <header class="bg-primario shadow p-4 flex flex-col md:flex-row md:justify-center md:gap-3 items-center gap-4">
+    <header class="bg-primario shadow p-4 flex flex-col md:flex-row md:justify-center md:gap-3 items-center gap-4 animate-fadeInDown">
       <img src="https://img.icons8.com/ios-filled/50/000000/scales.png" alt="Logo balança advogado" class="h-10 transition-transform duration-200 active:scale-110 mb-2 md:mb-0" />
+      
       <div class="flex flex-row gap-2 mb-2 md:mb-0">
-        <button data-tema="claro" class="p-2 rounded-full hover:bg-claro-secundario focus:bg-claro-destaque focus:outline-none transition">
-          <img src="https://freesvg.org/img/H5MljaZdAT1t4.png" alt="Tema Claro" class="w-12 h-12 rounded-full object-contain" />
+        <button data-tema="claro" class="p-2 rounded-full hover:bg-white focus:bg-gray-200 focus:outline-none transition">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRXpCnWfpJRc05r0sLd1hglTgLqNa2ML7caA&s" alt="Tema Claro (bola azul)" class="w-12 h-12 rounded-full object-contain" />
         </button>
+        
         <button data-tema="escuro" class="p-2 rounded-full hover:bg-escuro-secundario focus:bg-escuro-destaque focus:outline-none transition">
           <img src="https://freesvg.org/img/circle-15.png" alt="Tema Escuro" class="w-12 h-12 rounded-full object-contain " />
         </button>
+        
         <button data-tema="neutro" class="p-2 rounded-full hover:bg-neutro-secundario focus:bg-neutro-destaque focus:outline-none transition">
           <img src="https://freesvg.org/img/Orange_Sun_Wild_West_Vector_Pixel_Art.png" alt="Tema dourado" class="w-12 h-12 rounded-full object-contain" />
         </button>
       </div>
+      
       <h1 class="text-xl md:text-2xl font-bold text-contraste text-center md:ms-80">Dr. Paulinho - Advogado de Divórcios</h1>
     </header>
 
@@ -36,18 +40,28 @@
     <section class="px-4 py-10 max-w-4xl mx-auto bg-fundo">
       <h3 class="text-xl md:text-2xl font-bold mb-6 text-center text-titulo">Requisitos para o processo</h3>
       <div class="grid gap-6 md:grid-cols-3">
-        <div class="bg-caixa p-6 rounded-xl shadow">
-          <h4 class="font-semibold text-lg mb-2 text-titulo">Sem filhos menores</h4>
+        <div class="bg-caixa p-6 rounded-xl shadow animate-fadeInUp" style="animation-delay: 0.1s">
+          <h4 class="font-semibold text-lg mb-2 text-titulo ">Sem filhos menores</h4>
           <p class="text-sm text-texto">O casal não pode ter filhos menores de idade.</p>
         </div>
-        <div class="bg-caixa p-6 rounded-xl shadow">
+        <div class="bg-caixa p-6 rounded-xl shadow animate-fadeInUp" style="animation-delay: 1.5s;">
           <h4 class="font-semibold text-lg mb-2 text-titulo">Sem bens a dividir</h4>
           <p class="text-sm text-texto">Não pode haver divisão de patrimônio.</p>
         </div>
-        <div class="bg-caixa p-6 rounded-xl shadow">
+        <div class="bg-caixa p-6 rounded-xl shadow animate-fadeInUp" style="animation-delay: 2.5s;">
           <h4 class="font-semibold text-lg mb-2 text-titulo">Acordo entre ambas as partes</h4>
           <p class="text-sm text-texto">As partes precisam estar de comum acordo.</p>
         </div>
+      </div>
+    </section>
+
+    <!--QUEM SOU EU-->
+    <section class="relative flex items-center min-h-[300px]">
+      <!-- Lado esquerdo translúcido -->
+      <div class="absolute left-0 top-0 h-full w-1/2 bg-blue-600/50 animate-fadeInLeft"></div>
+      <!-- Foto do advogado -->
+      <div class="ml-auto z-10 animate-fadeInRight">
+        <img src="URL_DA_FOTO" alt="Advogado" class="rounded-full w-40 h-40 shadow-2xl" />
       </div>
     </section>
 
@@ -72,14 +86,6 @@
     </footer>
 
     <!-- Script de troca de tema -->
-    <script>
-      const body = document.body;
-      document.querySelectorAll('[data-tema]').forEach(botao => {
-        botao.addEventListener('click', () => {
-          body.classList.remove('tema-claro', 'tema-escuro', 'tema-neutro');
-          body.classList.add(`tema-${botao.dataset.tema}`);
-        });
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
