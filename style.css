@@ -49,6 +49,8 @@
 }
 
 /* Utilitários */
+
+/*ANIMACOES QUE EU FIZ*/
 @keyframes fadeInUp {
   0% {opacity: 0;transform: translateY(30px);}
   100% {opacity: 1;transform: translateY(0);}
@@ -83,7 +85,21 @@
   animation: fadeInRight 1s cubic-bezier(.5,1.5,.5,1) both;
 }
 
+/*COLOCAR FADE OM DELAY NA GRID*/
+.grid > .fade-scroll {
+  animation-delay: 0.5s;
+}
+.grid > .fade-scroll:nth-child(2) {
+  animation-delay: 1s;
+}
+.grid > .fade-scroll:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.grid > .fade-scroll:nth-child(4) {
+  animation-delay: 1.5s;
+}
 
+/*VARIAVEIS DE CORES*/
 .bg-fundo { background: var(--cor-fundo) !important; }
 .bg-primario { background: var(--cor-primario) !important; }
 .bg-secundario { background: var(--cor-secundario) !important; }
