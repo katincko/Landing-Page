@@ -66,9 +66,13 @@
   100% { opacity: 1; transform: translateX(0);}
 }
 .animate-fadeInUp{
-  animation: fadeInUp 1.8s cubic-bezier(.5,1.5,.5,1) both;
+  animation: fadeInUp 0.8s cubic-bezier(.5,1.5,.5,1) both;
 
 }
+.delay-100 { animation-delay: 0.1s !important; }
+.delay-200 { animation-delay: 0.2s !important; }
+.delay-300 { animation-delay: 0.3s !important; }
+.delay-400 { animation-delay: 0.4s !important; }
 .animate-fadeInDown{
   animation: fadeInDown 1s ease both;
 }

@@ -8,28 +8,31 @@
     <link rel="stylesheet" href="style.css">
    
   </head>
-  <body class="tema-claro font-sans transition-colors duration-300 bg-fundo text-texto">
-    <!-- Header -->
-    <header class="bg-primario shadow p-4 flex flex-col md:flex-row md:justify-center md:gap-3 items-center gap-4 animate-fadeInDown">
-      <img src="https://img.icons8.com/ios-filled/50/000000/scales.png" alt="Logo balança advogado" class="h-10 transition-transform duration-200 active:scale-110 mb-2 md:mb-0" />
+  <!-- Header -->
+  <header class="bg-primario shadow p-4 flex flex-col md:flex-row md:justify-center md:gap-3 items-center gap-4 animate-fadeInDown">
+    <img src="https://img.icons8.com/ios-filled/50/000000/scales.png" alt="Logo balança advogado" class="h-10 transition-transform duration-200 active:scale-110 mb-2 md:mb-0" />
+    
+    <div class="flex flex-row gap-2 mb-2 md:mb-0">
+      <button data-tema="claro" class="p-2 rounded-full hover:bg-white focus:bg-gray-200 focus:outline-none transition">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRXpCnWfpJRc05r0sLd1hglTgLqNa2ML7caA&s" alt="Tema Claro (bola azul)" class="w-12 h-12 rounded-full object-contain" />
+      </button>
       
-      <div class="flex flex-row gap-2 mb-2 md:mb-0">
-        <button data-tema="claro" class="p-2 rounded-full hover:bg-white focus:bg-gray-200 focus:outline-none transition">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRXpCnWfpJRc05r0sLd1hglTgLqNa2ML7caA&s" alt="Tema Claro (bola azul)" class="w-12 h-12 rounded-full object-contain" />
-        </button>
-        
-        <button data-tema="escuro" class="p-2 rounded-full hover:bg-escuro-secundario focus:bg-escuro-destaque focus:outline-none transition">
-          <img src="https://freesvg.org/img/circle-15.png" alt="Tema Escuro" class="w-12 h-12 rounded-full object-contain " />
-        </button>
-        
-        <button data-tema="neutro" class="p-2 rounded-full hover:bg-neutro-secundario focus:bg-neutro-destaque focus:outline-none transition">
-          <img src="https://freesvg.org/img/Orange_Sun_Wild_West_Vector_Pixel_Art.png" alt="Tema dourado" class="w-12 h-12 rounded-full object-contain" />
-        </button>
-      </div>
+      <button data-tema="escuro" class="p-2 rounded-full hover:bg-escuro-secundario focus:bg-escuro-destaque focus:outline-none transition">
+        <img src="https://freesvg.org/img/circle-15.png" alt="Tema Escuro" class="w-12 h-12 rounded-full object-contain " />
+      </button>
       
-      <h1 class="text-xl md:text-2xl font-bold text-contraste text-center md:ms-80">Dr. Paulinho - Advogado de Divórcios</h1>
-    </header>
+      <button data-tema="neutro" class="p-2 rounded-full hover:bg-neutro-secundario focus:bg-neutro-destaque focus:outline-none transition">
+        <img src="https://freesvg.org/img/Orange_Sun_Wild_West_Vector_Pixel_Art.png" alt="Tema dourado" class="w-12 h-12 rounded-full object-contain" />
+      </button>
+    </div>
+    
+    <h1 class="text-xl md:text-2xl font-bold text-contraste text-center md:ms-80">Dr. Paulinho - Advogado de Divórcios</h1>
+  </header>
 
+  <body class="tema-claro font-sans transition-colors duration-300 bg-fundo text-texto">
+    <main >
+
+    </main>
     <!-- Foto e título -->
     <section class="text-center py-10 px-4 bg-fundo">
       <img src="https://api.dicebear.com/9.x/thumbs/svg?seed=Destiny" alt="Avatar ilustrado de Paulinho" class="mx-auto rounded-full w-40 h-40 object-contain bg-contraste mb-4" />
@@ -58,7 +61,7 @@
     <!--QUEM SOU EU-->
     <section class="relative flex items-center min-h-[300px]">
       <!-- Lado esquerdo translúcido -->
-      <div class="absolute left-0 top-0 h-full w-1/2 bg-blue-600/50 animate-fadeInLeft"></div>
+      <div class="absolute left-0 top-0 h-full w-1/2 bg-blue-600/50 fade-scroll delay-100"></div>
       <!-- Foto do advogado -->
       <div class="ml-auto z-10 animate-fadeInRight">
         <img src="URL_DA_FOTO" alt="Advogado" class="rounded-full w-40 h-40 shadow-2xl" />
