@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  /* Cores principais da identidade */
+  --cor-primario: #001C38;     /* Azul institucional forte */
+  --cor-contraste: #fbffff;    /* Branco levemente azulado */
+
+  /* Fundo geral e caixas */
+  --cor-fundo: #f0f4f8;        /* Azul claríssimo de fundo (melhor que cinza) */
+  --cor-caixa: #ffffff;        /* Caixas continuam brancas pra contraste */
+
+  /* Destaques e chamadas */
+  --cor-destaque: #00598a;     /* Azul médio vibrante pra chamar atenção */
+  --cor-secundario: #5086a9;   /* Azul acinzentado suave pro equilíbrio */
+
+  /* Tipografia */
+  --cor-titulo: #001427;       /* Azul quase preto, ótimo pra título */
+  --cor-texto: #263646;        /* Cinza-azulado escuro, confortável pra leitura */
+}
+
+
+
+
+/* Utilitários */
+html {
+  scroll-behavior: smooth;
+}
+/*ANIMACOES QUE EU FIZ*/
+@keyframes fadeInUp {
+  0% {opacity: 0;transform: translateY(30px);}
+  100% {opacity: 1;transform: translateY(0);}
+}
+@keyframes fadeInDown {
+  0% {opacity: 0;transform: translateY(-30px);}
+  100% {opacity: 1;transform: translateY(0);}
+}
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(40px);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+.animate-fadeInUp{
+  animation: fadeInUp 0.8s cubic-bezier(.5,1.5,.5,1) both;
+
+}
+.delay-100 { animation-delay: 0.1s !important; }
+.delay-200 { animation-delay: 0.2s !important; }
+.delay-300 { animation-delay: 0.3s !important; }
+.delay-400 { animation-delay: 0.4s !important; }
+.animate-fadeInDown{
+  animation: fadeInDown 1s ease both;
+}
+.animate-fadeInLeft {
+  animation: fadeInLeft 1s cubic-bezier(.5,1.5,.5,1) both;
+}
+.animate-fadeInRight {
+  animation: fadeInRight 1s cubic-bezier(.5,1.5,.5,1) both;
+}
+
+/*COLOCAR FADE OM DELAY NA GRID*/
+.grid > .fade-scroll {
+  animation-delay: 0.5s;
+}
+.grid > .fade-scroll:nth-child(2) {
+  animation-delay: 1s;
+}
+.grid > .fade-scroll:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.grid > .fade-scroll:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+/*VARIAVEIS DE CORES*/
+.bg-fundo { background: var(--cor-fundo) !important; }
+.bg-primario { background: var(--cor-primario) !important; }
+.bg-secundario { background: var(--cor-secundario) !important; }
+.bg-destaque { background: var(--cor-destaque) !important; }
+.bg-contraste { background: var(--cor-contraste) !important; }
+.bg-caixa { background: var(--cor-caixa) !important; }
+
+.text-titulo { color: var(--cor-titulo) !important; }
+.text-texto { color: var(--cor-texto) !important; }
+.text-contraste { color: var(--cor-contraste) !important; }
+
+.border-contraste { border-color: var(--cor-contraste) !important; }
+.border-primario { border-color: var(--cor-primario) !important; }
+.border-secundario { border-color: var(--cor-secundario) !important; }
+.border-destaque { border-color: var(--cor-destaque) !important; }
+.border-caixa { border-color: var(--cor-caixa) !important; }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link href="css/output.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css">
+   
+  </head>
+  <!-- Header -->
+  <header class="grid grid-cols-3 items-center p-4 bg-primario shadow-xl">
+    <!-- Logo -->
+    <img src="./img/LogoBlueNoText.png" class="w-12 h-12 rounded-full place-self-start" />
+  
+    <!-- Título centralizado -->
+    <h1 class="text-xl md:text-2xl font-bold text-contraste text-center">Fonseca Adv</h1>
+  
+    <!-- Nav links (desktop) -->
+    <nav id="menu" class="hidden md:flex gap-4 justify-self-end">
+      <a href="#quem-sou-eu" class="text-contraste">Quem sou eu</a>
+      <a href="#requisitos" class="text-contraste">Requisitos</a>
+      <a href="#contato" class="text-contraste">Contato</a>
+    </nav>
+  
+    <!-- Hamburger (mobile) -->
+    <button class="block md:hidden text-contraste justify-self-end" id="menu-btn">&#9776;</button>
+  </header>
+
+  <body class="tema-claro font-sans transition-colors duration-300 bg-fundo text-texto">
+    <main >
+
+    </main>
+    <!-- Foto e título -->
+    <section class="text-center py-10 px-4 bg-fundo">
+      <img src="https://api.dicebear.com/9.x/thumbs/svg?seed=Destiny" alt="Avatar ilustrado de Paulinho" class="mx-auto rounded-full w-40 h-40 object-contain bg-contraste mb-4" />
+      <h2 class="text-2xl md:text-3xl font-semibold text-titulo">Especialista em Divórcios Consensuais</h2>
+    </section>
+
+    <!-- Requisitos -->
+    <section id = "requisitos" class="px-4 py-10 max-w-4xl mx-auto bg-fundo">
+      <h3 class="text-xl md:text-2xl font-bold mb-6 text-center text-titulo">Requisitos para o processo</h3>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-caixa p-6 rounded-xl shadow fade-scroll" >
+          <h4 class="font-semibold text-lg mb-2 text-titulo ">Sem filhos menores</h4>
+          <p class="text-sm text-texto">O casal não pode ter filhos menores de idade.</p>
+        </div>
+        <div class="bg-caixa p-6 rounded-xl shadow fade-scroll" >
+          <h4 class="font-semibold text-lg mb-2 text-titulo">Sem bens a dividir</h4>
+          <p class="text-sm text-texto">Não pode haver divisão de patrimônio.</p>
+        </div>
+        <div class="bg-caixa p-6 rounded-xl shadow fade-scroll"  >
+          <h4 class="font-semibold text-lg mb-2 text-titulo">Acordo entre ambas as partes</h4>
+          <p class="text-sm text-texto">As partes precisam estar de comum acordo.</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Contato -->
+    <section class="bg-primario py-10 px-4 fade-scroll">
+      <div class="max-w-xl mx-auto">
+        <h3 class="text-xl md:text-2xl font-bold text-center mb-6 text-contraste">Entre em contato</h3>
+        <form class="grid gap-4">
+          <input type="text" placeholder="Seu nome" class="p-3 border border-contraste rounded-lg text-texto bg-fundo" />
+          <input type="email" placeholder="Seu e-mail" class="p-3 border border-contraste rounded-lg text-texto bg-fundo" />
+          <textarea placeholder="Mensagem" class="p-3 border border-contraste rounded-lg text-texto bg-fundo"></textarea>
+          <button type="submit" class="bg-destaque text-contraste py-3 rounded-lg hover:bg-primario transition">
+            Enviar mensagem
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primario text-center p-4 mt-10">
+      <p class="text-sm text-contraste">© 2025 Dr. Paulinho - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Script de troca de tema -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
