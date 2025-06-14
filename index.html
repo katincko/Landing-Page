@@ -9,24 +9,58 @@
    
   </head>
   <!-- Header -->
-  <header class="grid grid-cols-3 items-center p-4 bg-primario shadow-xl">
-    <!-- Logo -->
-    <img src="./img/LogoBlueNoText.png" class="w-12 h-12 rounded-full place-self-start" />
+  <header class="flex items-center justify-between p-4 bg-primario shadow-xl relative">
+    <!-- Logo longa, menor e centralizada no mobile -->
+    <img 
+      src="./img/LogoLonga.png" 
+      alt="Logo Fonseca Adv"
+      class="max-h-10 md:max-h-16 w-auto object-contain flex-shrink-0"
+      style="max-width: 120px;"
+    />
   
-    <!-- Título centralizado -->
-    <h1 class="text-xl md:text-2xl font-bold text-contraste text-center">Fonseca Adv</h1>
+    <!-- H1 + Hamburguer (mobile) -->
+    <div class="flex items-center gap-2 md:hidden">
+      <h1 class="text-base font-bold text-contraste">Fonseca Adv</h1>
+      <button id="menu-btn" class="text-3xl text-contraste focus:outline-none transition-transform duration-300">
+        &#9776;
+      </button>
+    </div>
+  
+    <!-- H1 centralizado (desktop) -->
+    <h1 class="hidden md:block text-xl md:text-2xl font-bold text-contraste text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">Fonseca Adv</h1>
   
     <!-- Nav links (desktop) -->
-    <nav id="menu" class="hidden md:flex gap-4 justify-self-end">
+    <nav class="hidden md:flex gap-6 items-center">
       <a href="#quem-sou-eu" class="text-contraste">Quem sou eu</a>
       <a href="#requisitos" class="text-contraste">Requisitos</a>
       <a href="#contato" class="text-contraste">Contato</a>
     </nav>
   
-    <!-- Hamburger (mobile) -->
-    <button class="block md:hidden text-contraste justify-self-end" id="menu-btn">&#9776;</button>
+    <!-- Mobile dropdown (hidden by default) -->
+    <nav 
+      id="mobile-menu" 
+      class="absolute top-full left-4 right-4 bg-primario rounded-b-lg
+      shadow-lg flex flex-col gap-4 p-4 opacity-0 pointer-events-none 
+      -translate-y-4  transition-all duration-300 z-50"
+    >
+      <!-- Botão X absoluto no canto superior direito -->
+      <button 
+        id="close-menu" 
+        class="absolute top-4 right-4 text-2xl text-contraste md:hidden z-10"
+        aria-label="Fechar menu"
+      >
+        &times;
+      </button>
+      <!-- Links empilhados, sem espaço extra acima deles -->
+      <a href="#quem-sou-eu" class="text-contraste mt-2 ">Quem sou eu</a>
+      <a href="#requisitos" class="text-contraste">Requisitos</a>
+      <a href="#contato" class="text-contraste">Contato</a>
+    </nav>
   </header>
 
+
+
+  <!--BODY!-->
   <body class="tema-claro font-sans transition-colors duration-300 bg-fundo text-texto">
     <main >
 
@@ -59,7 +93,7 @@
     
 
     <!-- Contato -->
-    <section class="bg-primario py-10 px-4 fade-scroll">
+    <section id="contato" class="bg-primario py-10 px-4 fade-scroll">
       <div class="max-w-xl mx-auto">
         <h3 class="text-xl md:text-2xl font-bold text-center mb-6 text-contraste">Entre em contato</h3>
         <form class="grid gap-4">

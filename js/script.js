@@ -1,10 +1,3 @@
-const body = document.body;
-      document.querySelectorAll('[data-tema]').forEach(botao => {
-        botao.addEventListener('click', () => {
-          body.classList.remove('tema-claro', 'tema-escuro', 'tema-neutro');
-          body.classList.add(`tema-${botao.dataset.tema}`);
-        });
-});
 
 // Animação on-scroll
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 // Menu Hamburguer
-document.getElementById('menu-btn').onclick = () => {
-    document.getElementById('menu').classList.toggle('hidden');
-};
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('close-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+closeBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+});
+
+// [Opcional] Fecha o menu ao clicar em qualquer link
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+});
