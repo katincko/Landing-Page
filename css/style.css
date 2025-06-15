@@ -68,6 +68,13 @@ html {
 .delay-200 { animation-delay: 0.2s !important; }
 .delay-300 { animation-delay: 0.3s !important; }
 .delay-400 { animation-delay: 0.4s !important; }
+.delay-500 { animation-delay: 0.5s !important; }
+.delay-600 { animation-delay: 0.6s !important; }
+.delay-700 { animation-delay: 0.7s !important; }
+.delay-800 { animation-delay: 0.8s !important; }
+.delay-900 { animation-delay: 0.9s !important; }
+.delay-1000 { animation-delay: 1s !important; }
+
 .animate-fadeInDown{
   animation: fadeInDown 1s ease both;
 }
@@ -78,19 +85,8 @@ html {
   animation: fadeInRight 1s cubic-bezier(.5,1.5,.5,1) both;
 }
 
-/*COLOCAR FADE OM DELAY NA GRID*/
-.grid > .fade-scroll {
-  animation-delay: 0.5s;
-}
-.grid > .fade-scroll:nth-child(2) {
-  animation-delay: 1s;
-}
-.grid > .fade-scroll:nth-child(3) {
-  animation-delay: 1.5s;
-}
-.grid > .fade-scroll:nth-child(4) {
-  animation-delay: 1.5s;
-}
+
+
 
 /*VARIAVEIS DE CORES*/
 .bg-fundo { background: var(--cor-fundo) !important; }
@@ -109,3 +105,19 @@ html {
 .border-secundario { border-color: var(--cor-secundario) !important; }
 .border-destaque { border-color: var(--cor-destaque) !important; }
 .border-caixa { border-color: var(--cor-caixa) !important; }
+
+
+
+/* Fontes para títulos e conteúdo */
+.font-titulo { font-family: 'EB Garamond', serif !important; }
+.font-conteudo { font-family: 'Inter', sans-serif !important; }
+
+/* Aplica Inter como fonte padrão do body */
+body, html {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sempre inicia fade-scroll invisível até animar */
+.fade-scroll {
+  opacity: 0;
+}
