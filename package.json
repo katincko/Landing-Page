@@ -2,17 +2,11 @@
   "name": "landing-page",
   "version": "1.0.0",
   "main": "index.js",
-<<<<<<< HEAD
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-=======
   "scripts": 
   {
   "dev": "tailwindcss -i ./css/style.css -o ./css/output.css --watch"
   },
 
->>>>>>> e36c26da0ab14f817fb1c8c2034188593e0a9ef8
   "keywords": [],
   "author": "",
   "license": "ISC",

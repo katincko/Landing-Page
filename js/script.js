@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-const body = document.body;
-      document.querySelectorAll('[data-tema]').forEach(botao => {
-        botao.addEventListener('click', () => {
-          body.classList.remove('tema-claro', 'tema-escuro', 'tema-neutro');
-          body.classList.add(`tema-${botao.dataset.tema}`);
-        });
-});
-=======
->>>>>>> e36c26da0ab14f817fb1c8c2034188593e0a9ef8
 
 // Animação on-scroll
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,9 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.15 });
   
     animated.forEach(el => observer.observe(el));
-<<<<<<< HEAD
-  });
-=======
   });
 
 // Menu Hamburguer
@@ -46,4 +33,3 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     mobileMenu.classList.remove('open');
   });
 });
->>>>>>> e36c26da0ab14f817fb1c8c2034188593e0a9ef8
