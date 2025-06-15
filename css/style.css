@@ -5,50 +5,43 @@
 
 
 :root {
-  --cor-fundo: #f9f9f9;
-  --cor-primario: #1e293b;
-  --cor-secundario: #475569;
-  --cor-destaque: #475569;
-  --cor-contraste: #ffffff;
-  --cor-titulo: #0f172a;
-  --cor-texto: #334155;
-  --cor-caixa: #ffffff;
+  /* Cores principais da identidade */
+  --cor-primario: #001C38;     /* Azul institucional forte */
+  --cor-contraste: #fbffff;    /* Branco levemente azulado */
+
+  /* Fundo geral e caixas */
+  --cor-fundo: #f0f4f8;        /* Azul claríssimo de fundo (melhor que cinza) */
+  --cor-caixa: #ffffff;        /* Caixas continuam brancas pra contraste */
+
+  /* Destaques e chamadas */
+  --cor-destaque: #00598a;     /* Azul médio vibrante pra chamar atenção */
+  --cor-secundario: #5086a9;   /* Azul acinzentado suave pro equilíbrio */
+
+  /* Tipografia */
+  --cor-titulo: #001427;       /* Azul quase preto, ótimo pra título */
+  --cor-texto: #263646;        /* Cinza-azulado escuro, confortável pra leitura */
 }
 
 
-.tema-claro {
-  --cor-fundo: #f9f9f9;
-  --cor-primario: #1e293b;
-  --cor-secundario: #475569;
-  --cor-destaque: #475569;
-  --cor-contraste: #ffffff;
-  --cor-titulo: #0f172a;
-  --cor-texto: #334155;
-  --cor-caixa: #ffffff;
-}
-.tema-escuro {
-  --cor-fundo: #181818;        /* Fundo principal escuro */
-  --cor-primario: #232323;     /* Header, botões, destaques */
-  --cor-secundario: #282828;   /* Caixas e textos */
-  --cor-destaque: #cccccc;     /* Destaques/botões */
-  --cor-contraste: #ffffff;    /* Texto sobre escuro e botões */
-  --cor-titulo: #e0e0e0;       /* Títulos claros */
-  --cor-texto: #e0e0e0;        /* Texto claro */
-  --cor-caixa: #232323;        /* Caixas */
-}
-/* PALETA NEUTRA/DOURADA ATUALIZADA */
-.tema-neutro {
-  --cor-fundo: #f5f1ec;         /* Fundo principal */
-  --cor-primario: #5c3b2e;      /* Header, botões, destaques */
-  --cor-secundario: #a07b60;    /* Caixas e textos */
-  --cor-destaque: #7e5b4d;      /* Destaques/botões */
-  --cor-contraste: #ffffff;     /* Texto sobre escuro e botões */
-  --cor-titulo: #5c3b2e;        /* Títulos */
-  --cor-texto: #1e1e1e;         /* Texto escuro sobre claro */
-  --cor-caixa: #e7d7ca;         /* Fundo intermediário das seções */
-}
+
 
 /* Utilitários */
+html {
+  scroll-behavior: smooth;
+}
+
+/*ANIMACAO HEADER HAMBURGUER MENU*/
+#mobile-menu.open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+#mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: all 0.3s;
+}
 
 /*ANIMACOES QUE EU FIZ*/
 @keyframes fadeInUp {
@@ -75,6 +68,13 @@
 .delay-200 { animation-delay: 0.2s !important; }
 .delay-300 { animation-delay: 0.3s !important; }
 .delay-400 { animation-delay: 0.4s !important; }
+.delay-500 { animation-delay: 0.5s !important; }
+.delay-600 { animation-delay: 0.6s !important; }
+.delay-700 { animation-delay: 0.7s !important; }
+.delay-800 { animation-delay: 0.8s !important; }
+.delay-900 { animation-delay: 0.9s !important; }
+.delay-1000 { animation-delay: 1s !important; }
+
 .animate-fadeInDown{
   animation: fadeInDown 1s ease both;
 }
@@ -85,19 +85,8 @@
   animation: fadeInRight 1s cubic-bezier(.5,1.5,.5,1) both;
 }
 
-/*COLOCAR FADE OM DELAY NA GRID*/
-.grid > .fade-scroll {
-  animation-delay: 0.5s;
-}
-.grid > .fade-scroll:nth-child(2) {
-  animation-delay: 1s;
-}
-.grid > .fade-scroll:nth-child(3) {
-  animation-delay: 1.5s;
-}
-.grid > .fade-scroll:nth-child(4) {
-  animation-delay: 1.5s;
-}
+
+
 
 /*VARIAVEIS DE CORES*/
 .bg-fundo { background: var(--cor-fundo) !important; }
@@ -116,3 +105,19 @@
 .border-secundario { border-color: var(--cor-secundario) !important; }
 .border-destaque { border-color: var(--cor-destaque) !important; }
 .border-caixa { border-color: var(--cor-caixa) !important; }
+
+
+
+/* Fontes para títulos e conteúdo */
+.font-titulo { font-family: 'EB Garamond', serif !important; }
+.font-conteudo { font-family: 'Inter', sans-serif !important; }
+
+/* Aplica Inter como fonte padrão do body */
+body, html {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sempre inicia fade-scroll invisível até animar */
+.fade-scroll {
+  opacity: 0;
+}
