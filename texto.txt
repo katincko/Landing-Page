@@ -1,6 +1,6 @@
 -fazer animacao entre PaulinhoLendo e PaulinhoFeliz
 -PaulinhoSentado no sobre mim
-
+-Ao clicar no botao de whatsapp ele abrir uma tela de questionario para vir com as informacoes prontas
 
 Você conhece todos os seus direitos trabalhistas?
 Se você foi demitido, está com salários atrasados, não recebeu horas extras ou sofre assédio no trabalho, nós podemos te ajudar.
