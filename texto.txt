@@ -1,6 +1,8 @@
--fazer animacao entre PaulinhoLendo e PaulinhoFeliz
+-fazer animacao entre PaulinhoLendo e PaulinhoFeliz;
+-quando o usuario clica no card pra saber mais q vai ocorrer a animacao
 -PaulinhoSentado no sobre mim
--Ao clicar no botao de whatsapp ele abrir uma tela de questionario para vir com as informacoes prontas
+-Ao clicar no botao de whatsapp ele abrir direto no zap
+-colocar instagram? 
 
 Você conhece todos os seus direitos trabalhistas?
 Se você foi demitido, está com salários atrasados, não recebeu horas extras ou sofre assédio no trabalho, nós podemos te ajudar.

@@ -15,7 +15,7 @@
 
   /* Destaques e chamadas */
   --cor-destaque: #00598a;     /* Azul médio vibrante pra chamar atenção */
-  --cor-secundario: #5086a9;   /* Azul acinzentado suave pro equilíbrio */
+  --cor-secundario: #86b6d6;   /* Azul acinzentado suave pro equilíbrio */
 
   /* Tipografia */
   --cor-titulo: #001427;       /* Azul quase preto, ótimo pra título */
@@ -23,7 +23,13 @@
 }
 
 
-
+.img-fade {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.img-fade.hide {
+  opacity: 0;
+}
 
 /* Utilitários */
 html {

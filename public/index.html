@@ -8,38 +8,32 @@
   <title>Landing Page</title>
   <link href="css/output.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css">
-  <!-- Google Fonts para títulos serifados e texto moderno -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Inter:wght@400;600&display=swap"
     rel="stylesheet">
 
 </head>
 
 
-<body class="tema-claro font-conteudo transition-colors duration-300 bg-fundo text-texto">
+<body class="tema-claro font-conteudo transition-colors duration-300 text-texto" style="background: linear-gradient(to bottom, var(--cor-fundo)0%, var(--cor-fundo) 30%, var(--cor-secundario) 100%);">
 
 
-  <!-- Header -->
   <header class="fixed top-0 left-0 w-full z-20 flex items-center justify-between p-4 bg-primario shadow-xl">
 
-    <!-- Logo longa, menor e centralizada no mobile -->
     <img src="./img/LogoLonga.png" alt="Logo Fonseca Adv"
       class="max-h-10 md:max-h-16 w-auto object-contain flex-shrink-0" style="max-width: 120px;" />
 
-    <!-- H1 + Hamburguer (mobile) -->
-    <div class="flex items-center gap-2 md:hidden">
+    <div class="flex items-center gap-2 lg:hidden">
       <h1 class="text-base font-bold text-contraste font-titulo">Fonseca Adv</h1>
       <button id="menu-btn" class="text-3xl text-contraste focus:outline-none transition-transform duration-300">
         &#9776;
       </button>
     </div>
 
-    <!-- H1 centralizado (desktop) -->
     <h1
       class="hidden md:block text-xl md:text-2xl font-bold text-contraste text-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-titulo">
       Fonseca Adv</h1>
 
-    <!-- Nav links (desktop) -->
-    <nav class="hidden md:flex gap-6 items-center">
+    <nav class="hidden lg:flex gap-6 items-center">
       <a href="#quem-sou-eu" class="text-contraste ">Quem sou eu</a>
       <a href="#direitos-trabalhistas" class="text-contraste">direitos trabalhistas</a>
       <a href="#contato" class="text-contraste">Contato</a>
@@ -48,15 +42,12 @@
 
   </header>
 
-  <!-- Mobile dropdown fora do header -->
   <nav id="mobile-menu"
-    class="fixed top-16 left-4 right-4 bg-contraste rounded-b-lg shadow-lg flex flex-col gap-4 p-4 pointer-events-none transition-all duration-300 transition-linear z-10">
-    <!-- Botão X absoluto no canto superior direito -->
-    <button id="close-menu" class="absolute top-4 right-4 text-2xl text-primario md:hidden z-10"
+    class="fixed top-16 left-4 right-4 bg-contraste rounded-b-lg shadow-lg flex flex-col gap-4 p-4 pointer-events-none transition-all duration-300 transition-linear z-[999] lg:hidden ">
+    <button id="close-menu" class="absolute top-4 right-4 text-2xl text-primario z-10"
       aria-label="Fechar menu">
       &times;
     </button>
-    <!-- Links empilhados -->
     <a href="#quem-sou-eu"
       class="text-primario mt-2 rounded px-2 py-2 transition-colors duration-200 hover:bg-destaque hover:text-contraste">Quem
       sou eu</a>
@@ -66,39 +57,33 @@
       class="text-primario rounded px-2 py-2 transition-colors duration-200 hover:bg-destaque hover:text-contraste">Contato</a>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="relative">
-  <!-- Background cobre exatamente até o fim das métricas -->
+  <section class="relative" >
   <div class="absolute top-0 left-0 w-screen bottom-[30%] overflow-hidden -z-10">
     <img src="./img/background.png" alt="" class="w-full h-full object-cover" />
   </div>
 
-  <!-- Conteúdo central -->
-  <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 mt-10 flex flex-col md:flex-row items-center gap-10 md:gap-16 overflow-hidden">
-    <!-- Coluna da esquerda: Texto + Métricas (desktop) -->
+  <div class="max-w-6xl mx-auto px-4 py-16 md:py-18 mt-6 flex flex-col md:flex-row items-center overflow-hidden">
+
     <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-10">
       <h1 class="font-titulo text-titulo text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
         Advogado Trabalhista<br>
-        <span class="text-destaque">Especialista em Direitos do Trabalho</span>
+        <span class="text-destaque">Dr Paulo Fonseca</span>
       </h1>
-      <p class="text-lg md:text-xl mb-6 max-w-xl">
+      <p class="text-lg md:text-xl max-w-xl">
         Defesa dos seus direitos com ética, experiência e resultados.
         Atuação em ações trabalhistas, rescisões, verbas, assédio e mais.
       </p>
-      <button id="whatsapp" class="inline-flex items-center justify-center gap-2 flex-nowrap whitespace-nowrap bg-destaque text-contraste font-semibold px-8 py-3 rounded-2xl shadow-md transition-transform transform hover:scale-105 duration-200 mb-6">
+      <button id="whatsapp" class=" hidden md:inline-flex items-center justify-center gap-2 flex-nowrap whitespace-nowrap bg-destaque text-contraste font-semibold px-8 py-3 rounded-2xl shadow-md transition-transform transform hover:scale-105 duration-200 mb-6">
         <img class="max-h-5" src="./img/whatsapp-whats-app-svgrepo-com.svg" alt="Whatsapp">
         Agendar Consulta
       </button>
 
-      <!-- Métricas (apenas desktop) -->
       <div class="hidden md:flex gap-6 w-full max-w-md">
-        <!-- Card 1 -->
         <div class="flex-1 p-4 text-center font-semibold text-contraste shadow-lg relative rounded-tl-3xl rounded-br-3xl bg-primario [clip-path:'polygon(0%_0%,100%_10%,100%_90%,0%_100%)']">
           <span class="block text-3xl font-titulo font-bold mb-1 fade-scroll delay-100">+7</span>
           <span class="text-sm fade-scroll delay-400">Anos de experiência</span>
         </div>
 
-        <!-- Card 2 -->
         <div class="flex-1 p-4 text-center font-semibold text-contraste shadow-lg relative rounded-tl-3xl rounded-br-3xl bg-primario [clip-path:'polygon(0%_10%,100%_0%,100%_100%,0%_90%)']">
           <span class="block text-3xl font-titulo font-bold mb-1 fade-scroll delay-500">+90%</span>
           <span class="text-sm fade-scroll delay-800">Casos vencidos</span>
@@ -106,45 +91,43 @@
       </div>
     </div>
 
-    <!-- Coluna da direita: Foto + Métricas (mobile) -->
-    <div class="flex flex-col items-center gap-4 z-10">
-      <!-- Foto -->
-      <img src="./img/PaulinhoCadeira.png" alt="Dr. Paulinho" class="z-10 max-w-md" />
+    <div class="relative flex flex-col items-center z-10 w-80 md:w-auto"> 
+      <img src="./img/PaulinhoCadeira.png" alt="Dr. Paulinho" class="w-full h-auto object-cover rounded-xl z-10 max-w-md"/> 
       
-      <!-- Métricas (apenas mobile) -->
-      <div class="flex md:hidden gap-4 mt-2">
-        <!-- Card 1 -->
-        <div class="flex-1 p-3 text-center font-semibold text-contraste shadow-lg relative rounded-tl-3xl rounded-br-3xl bg-primario [clip-path:'polygon(0%_0%,100%_10%,100%_90%,0%_100%)']">
-          <span class="block text-2xl font-titulo font-bold mb-1 fade-scroll delay-100">+7</span>
+      <div class="absolute bottom-0 w-full flex md:hidden gap-2 transform -translate-y-[10%] z-20"> 
+        <div class="flex-1 p-2 text-center font-semibold text-contraste shadow-lg relative rounded-tl-2xl rounded-br-2xl bg-primario [clip-path:'polygon(0%_0%,100%_10%,100%_90%,0%_100%)']">
+          <span class="block text-lg font-titulo font-bold mb-1 fade-scroll delay-100">+7</span>
           <span class="text-xs fade-scroll delay-400">Anos de experiência</span>
         </div>
 
-        <!-- Card 2 -->
-        <div class="flex-1 p-3 text-center font-semibold text-contraste shadow-lg relative rounded-tl-3xl rounded-br-3xl bg-primario [clip-path:'polygon(0%_10%,100%_0%,100%_100%,0%_90%)']">
-          <span class="block text-2xl font-titulo font-bold mb-1 fade-scroll delay-500">+90%</span>
+        <div class="flex-1 p-2 text-center font-semibold text-contraste shadow-lg relative rounded-tl-2xl rounded-br-2xl bg-primario [clip-path:'polygon(0%_10%,100%_0%,100%_100%,0%_90%)']">
+          <span class="block text-lg font-titulo font-bold mb-1 fade-scroll delay-500">+90%</span>
           <span class="text-xs fade-scroll delay-800">Casos vencidos</span>
         </div>
+
       </div>
     </div>
-  </div>
+    <button id="whatsapp" class=" mt-10 md:hidden inline-flex items-center justify-center gap-2 flex-nowrap whitespace-nowrap bg-destaque text-contraste font-semibold px-8 py-3 rounded-2xl shadow-md transition-transform transform hover:scale-105 duration-200 mb-6">
+      <img class="max-h-5" src="./img/whatsapp-whats-app-svgrepo-com.svg" alt="Whatsapp">
+      Agendar Consulta
+    </button>
 </section>
 
-  <!-- Situações comuns -->
-  <section  class="max-w-6xl px-4 py-10 max-w-4xl mx-auto bg-fundo">
+
+ 
+  <section id="direitos-trabalhistas-section" class="max-w-6xl px-4 py-0 md:py-10 mx-auto relative">
     <h3 id="direitos-trabalhistas" class="text-xl md:text-2xl font-bold mb-6 text-center text-titulo font-titulo">
       Situações comuns que podem gerar indenização ou pagamento de verbas trabalhistas
     </h3>
-    <!-- Caixa do carrossel só no desktop -->
     <div class="relative">
-      <div class="flex flex-col gap-6 bg-[var(--cor-fundo)] 
-         md:bg-[var(--cor-contraste)] 
-         md:flex-row md:overflow-x-auto md:overflow-y-hidden 
+      <div class="flex flex-col gap-6 
+         md:bg-[var(--cor-contraste)]
+         md:flex-row md:overflow-x-auto md:overflow-y-hidden
          md:scroll-smooth md:pb-5
          md:rounded-2xl md:shadow-lg md:p-8
          scrollbar-thin scrollbar-thumb-destaque scrollbar-track-caixa"
         style="scrollbar-color: var(--cor-destaque) var(--cor-caixa);">
 
-        <!-- Card 1 -->
         <div
           class="min-w-[260px] max-w-xs w-full p-6 rounded-xl shadow fade-scroll delay-100 font-conteudo flex flex-col items-center text-center mx-auto md:mx-0 bg-caixa md:bg-fundo">
           <svg class="w-14 h-14 text-primario mb-2" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
@@ -155,7 +138,6 @@
           <h4 class="font-semibold text-lg mb-2 text-titulo">Demissão sem pagamento</h4>
           <p class="text-sm text-texto">Demissão sem receber todos os direitos e verbas rescisórias.</p>
         </div>
-        <!-- Card 2 -->
         <div
           class="min-w-[260px] max-w-xs w-full p-6 rounded-xl shadow fade-scroll delay-400 font-conteudo flex flex-col items-center text-center mx-auto md:mx-0 bg-caixa md:bg-fundo">
           <svg class="w-14 h-14 text-primario mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -167,7 +149,6 @@
           <h4 class="font-semibold text-lg mb-2 text-titulo">Atraso ou falta de salário</h4>
           <p class="text-sm text-texto">Salários pagos com atraso ou não pagos.</p>
         </div>
-        <!-- Card 3 -->
         <div
           class="min-w-[260px] max-w-xs w-full p-6 rounded-xl shadow fade-scroll delay-700 font-conteudo flex flex-col items-center text-center mx-auto md:mx-0 bg-caixa md:bg-fundo">
           <svg class="w-14 h-14 text-primario mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -178,7 +159,6 @@
           <h4 class="font-semibold text-lg mb-2 text-titulo">Horas extras/adicional noturno</h4>
           <p class="text-sm text-texto">Não pagamento de horas extras ou adicional noturno.</p>
         </div>
-        <!-- Card 4 -->
         <div
           class="min-w-[260px] max-w-xs w-full p-6 rounded-xl shadow fade-scroll delay-400 font-conteudo flex flex-col items-center text-center mx-auto md:mx-0 bg-caixa md:bg-fundo">
           <svg class="w-14 h-14 text-primario mb-2" viewBox="0 0 512 512" fill="currentColor"
@@ -195,7 +175,6 @@
           <h4 class="font-semibold text-lg mb-2 text-titulo">Assédio moral ou sexual</h4>
           <p class="text-sm text-texto">Situações de assédio no ambiente de trabalho.</p>
         </div>
-        <!-- Card 5 -->
         <div
           class="min-w-[260px] max-w-xs w-full p-6 rounded-xl shadow fade-scroll delay-400 font-conteudo flex flex-col items-center text-center mx-auto md:mx-0 bg-caixa md:bg-fundo">
           <svg class="w-14 h-14 text-primario mb-2" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
@@ -220,7 +199,6 @@
           <h4 class="font-semibold text-lg mb-2 text-titulo">Falta de registro (CLT)</h4>
           <p class="text-sm text-texto">Trabalho sem carteira assinada.</p>
         </div>
-        <!-- Card 6 -->
         <div
           class="min-w-[260px] max-w-xs w-full p-6 rounded-xl shadow fade-scroll delay-400 font-conteudo flex flex-col items-center text-center mx-auto md:mx-0 bg-caixa md:bg-fundo">
           <svg class="w-14 h-14 text-primario mb-2" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
@@ -246,7 +224,6 @@
           <h4 class="font-semibold text-lg mb-2 text-titulo">Demissão forçada</h4>
           <p class="text-sm text-texto">Pedido de demissão forçado (rescisão indireta).</p>
         </div>
-        <!-- Card 7 -->
         <div
           class="min-w-[260px] max-w-xs w-full p-6 rounded-xl shadow fade-scroll delay-400 font-conteudo flex flex-col items-center text-center mx-auto md:mx-0 bg-caixa md:bg-fundo">
           <svg class="w-14 h-14 text-primario mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -266,7 +243,6 @@
           <h4 class="font-semibold text-lg mb-2 text-titulo">FGTS não depositado</h4>
           <p class="text-sm text-texto">Falta de depósito do FGTS pelo empregador.</p>
         </div>
-        <!-- Card 8 -->
         <div
           class="min-w-[260px] max-w-xs w-full p-6 rounded-xl shadow fade-scroll delay-400 font-conteudo flex flex-col items-center text-center mx-auto md:mx-0 bg-caixa md:bg-fundo">
           <svg class="w-14 h-14 text-primario mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -285,19 +261,27 @@
           <p class="text-sm text-texto">Não pagamento de férias, 13º salário, aviso prévio etc.</p>
         </div>
       </div>
-      <!-- Scrollbar horizontal visível apenas no desktop -->
       <div class="hidden md:block w-full mt-2">
         <div class="h-2"></div>
       </div>
     </div>
-    <!-- Texto destacado fora dos cards -->
     <div class="mt-8 text-center font-conteudo text-base md:text-lg text-titulo px-2 md:px-8">
       Se você passou por algo assim, é seu direito buscar a reparação. E o melhor: com uma equipe qualificada e
       preocupada com a melhor solução jurídica para você.
-    </div>
+    </div> 
+    
+   <section class="relative max-w-6xl mx-auto px-4">
+  <img
+    id="PaulinhoLendo"
+    src="./img/PaulinhoLendo.jpeg"
+    data-alt-src="./img/PaulinhoFeliz.jpeg"
+    alt="Dr. Paulinho lendo"
+    class="w-80 h-auto rounded-xl shadow-lg mx-auto img-fade"
+  />
+</section>
+  
   </section>
 
-  <!-- Contato -->
   <section id="contato" class="bg-primario mt-32 py-10 px-4">
     <div class="max-w-xl mx-auto">
       <h3 class="text-xl md:text-2xl font-bold text-center mb-6 text-contraste">Entre em contato</h3>
@@ -313,12 +297,10 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-primario text-center p-4 mt-10">
     <p class="text-sm text-contraste font-titulo">© 2025 Dr. Paulinho - Todos os direitos reservados</p>
   </footer>
 
-  <!-- Script de troca de tema -->
   <script src="js/script.js"></script>
 </body>
 
