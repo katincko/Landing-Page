@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animated.forEach(el => observer.observe(el));
 });
 
+
 // Animação on-scroll DA IMAGEM DO PAULINHO LENDO
 document.addEventListener('DOMContentLoaded', () => {
   const fotoTrocavel = document.querySelector('#PaulinhoLendo');
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
               fotoTrocavel.src = fotoTrocavel.dataset.altSrc;
               fotoTrocavel.classList.remove('hide');
             }, 500);
-          }, 1000); // 1 segundo de delay antes de trocar a imagem
+          }, 2000); // 1 segundo de delay antes de trocar a imagem
           observerFoto.unobserve(entrada.target);
         }
       });
@@ -41,6 +42,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
+// ANIMACAO DE CADA CARD AO SER TOCADO!
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.interactive-card');
+
+  cards.forEach(card => {
+    // Adiciona o listener de clique para o card inteiro
+    card.addEventListener('click', (event) => {
+      // Verifica se o clique foi diretamente no link do WhatsApp. Se for, não faz nada.
+      if (event.target.closest('a')) {
+        return;
+      }
+
+      // Fecha qualquer outro card que esteja aberto
+      cards.forEach(otherCard => {
+        if (otherCard !== card) {
+          otherCard.classList.remove('is-active');
+        }
+      });
+      
+      // Abre ou fecha o card clicado
+      card.classList.toggle('is-active');
+    });
+
+    // --- CÓDIGO NOVO ADICIONADO ---
+    // Encontra o link do WhatsApp dentro do card
+    const whatsappLink = card.querySelector('.card-back a');
+
+    if (whatsappLink) {
+      // Adiciona um listener de clique APENAS para o link
+      whatsappLink.addEventListener('click', (event) => {
+        // Impede que o clique no link se propague para o card-pai
+        event.stopPropagation();
+      });
+    }
+  });
+});
 
 // Menu Hamburguer
 const menuBtn = document.getElementById('menu-btn');

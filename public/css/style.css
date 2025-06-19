@@ -24,12 +24,37 @@
 
 
 .img-fade {
-  transition: opacity 0.5s ease;
+  transition: opacity 1.5s ease;
   opacity: 1;
 }
 .img-fade.hide {
   opacity: 0;
 }
+
+/* Garante que o card tenha uma altura mínima em todas as telas */
+.interactive-card {
+  min-height: 300px;
+}
+
+/* Esconde a face traseira por padrão, movendo-a para baixo */
+.card-back {
+  /* Move o card para baixo, para fora da área visível */
+  transform: translateY(100%); 
+  /* Define a animação de transição para a propriedade 'transform' */
+  transition: transform 0.4s ease-in-out;
+  /* Impede que o conteúdo seja clicável enquanto estiver escondido */
+  pointer-events: none;
+}
+
+/* Quando o card está ativo (.is-active), a face traseira sobe para a posição original */
+.interactive-card.is-active .card-back {
+  transform: translateY(0);
+  /* Permite que o conteúdo seja clicável novamente */
+  pointer-events: auto; 
+}
+
+
+
 
 /* Utilitários */
 html {
