@@ -7,7 +7,7 @@
 :root {
   /* Cores principais da identidade */
   --cor-primario: #001C38;     /* Azul institucional forte */
-  --cor-contraste: #fbffff;    /* Branco levemente azulado */
+  --cor-contraste: #fffefe;    /* Branco levemente azulado */
 
   /* Fundo geral e caixas */
   --cor-fundo: #f0f4f8;        /* Azul claríssimo de fundo (melhor que cinza) */

@@ -1,4 +1,3 @@
-
 // Animação on-scroll
 document.addEventListener('DOMContentLoaded', () => {
     const animated = document.querySelectorAll('.fade-scroll');
@@ -93,9 +92,20 @@ closeBtn.addEventListener('click', () => {
   mobileMenu.classList.remove('open');
 });
 
-// [Opcional] Fecha o menu ao clicar em qualquer link
+//Fecha o menu ao clicar em qualquer link
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
   });
 });
+
+
+//Seçao de contato
+document.getElementById('form-contato').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome-contato').value.trim();
+      const mensagem = document.getElementById('mensagem-contato').value.trim();
+      const texto = `Olá, meu nome é ${nome} e encontrei seu contato pelo site. Gostaria de conversar sobre: ${mensagem}. Fico no aguardo, obrigado(a)!`;
+      const url = `https://wa.me/5524993027203?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    });
