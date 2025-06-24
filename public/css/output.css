@@ -1253,10 +1253,6 @@ video {
   scroll-snap-stop: always;
 }
 
-.scroll-mt-24 {
-  scroll-margin-top: 6rem;
-}
-
 .scroll-mt-32 {
   scroll-margin-top: 8rem;
 }
@@ -2791,16 +2787,16 @@ video {
   transition-delay: 100ms;
 }
 
+.delay-1000 {
+  transition-delay: 1000ms;
+}
+
 .delay-500 {
   transition-delay: 500ms;
 }
 
 .delay-700 {
   transition-delay: 700ms;
-}
-
-.delay-1000 {
-  transition-delay: 1000ms;
 }
 
 .duration-200 {
@@ -3246,14 +3242,6 @@ body, html {
     display: none;
   }
 
-  .md\:max-h-16 {
-    max-height: 4rem;
-  }
-
-  .md\:max-h-32 {
-    max-height: 8rem;
-  }
-
   .md\:max-h-24 {
     max-height: 6rem;
   }
@@ -3338,13 +3326,13 @@ body, html {
     line-height: 1;
   }
 
-  .md\:text-xl {
-    font-size: 1.25rem;
+  .md\:text-lg {
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 
-  .md\:text-lg {
-    font-size: 1.125rem;
+  .md\:text-xl {
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 
